@@ -10,41 +10,46 @@
 </head>
 
 <body>
-  <header class='p-5 mb-4 bg-light border text-center'>
-    <h1>Weather Dashboard</h1>
-  </header>
+    <header class='p-5 mb- bg-light border text-center'>
+        <h1>Weather Dashboard</h1>
+    </header>
 
-  <section>
+    <section id="main-container">
         <div class="row">
-          <div class="col col-lg-4 border" id="side-bar">
+            <section class="col col-lg-4 border" id="side-bar">
+                <form>
+                    <div class="mb-3">
+                        <label for="city-input" class="form-label">Search for a City</label> 
+                        <input class="form-control" id="city-input">
+                    </div>
+                    <button type="submit" id="btn-add-city" class="btn btn-primary">Submit</button>
+                </form>
 
-            <form>
-                <div class="mb-3">
-                    <label for="city-input" class="form-label">Search for a City</label>
-                    <input class="form-control" id="city-input">
+                <ul id="city-list"></ul>
+            </section>
+
+            <section class="col col-lg-8 border h-100" id="main-content">
+                
+                <div class="border" id="div-weather-current">
+                    <div id="current-city">hellocity</div>
+                    <div id="current-temp">hellotemp</div>
+                    <div id="current-wind">hellowind</div>
+                    <div id="current-humi">hellohumidity</div>
+
+
                 </div>
-                <button type="submit" id="btn-add-city" class="btn btn-primary">Submit</button>
-            </form>
-
-            <ul id="city-list">
-            </ul>
-
-
-          </div>
-          <section class="col col-lg-8 border" id="main-content">
-            <div id="weather-info">
-                <div class="border">
-                    Current Weather
-                </div>
-                <div class="border">
+                <div class="border" id="div-weather-forecast">
                     Future Weather
+
+
+
+
                 </div>
-          </section>
-
+            </section>
         </div>
-  </section>
+    </section>
 
-  <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
