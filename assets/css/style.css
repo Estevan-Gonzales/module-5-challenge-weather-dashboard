@@ -1,4 +1,52 @@
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+}
+
+ul {
+    padding: 10px;
+}
+
+form {
+    padding: 10px;
+    border: solid lightgrey;
+    margin: 5px;
+}
+
+.forecast-day {
+    margin: 5px;
+    background-color: bisque;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: solid orange;
+    width: 100%;
+}
+
 #main-container {
     height: 100%;
-    background-color: beige;
+    background-color: floralwhite;
+}
+
+#div-weather-forecast {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+#div-weather-current {
+    font-size: large;
+    background-color: lightblue;
+    padding: 10px;
+    margin: 5px;
+    border: solid skyblue;
+}
+
+#main-content {
+    margin: 0px;
+    padding: 0px;
+}
+
+#main-header {
+    padding: 20px;
+    background-color: floralwhite;
 }
