@@ -76,42 +76,42 @@ function showCityDetails(event) {
 
     currentCityEl.textContent = event.srcElement.id + " (" + today + ")";
     var iconCode = localStorage.getItem(event.srcElement.id + 'icon')
-    currentIconEl.setAttribute('src', 'http://openweathermap.org/img/w/' + iconCode + '.png');
+    currentIconEl.setAttribute('src', 'https://openweathermap.org/img/w/' + iconCode + '.png');
     currentTempEl.textContent = 'Temperature: ' + convertTemp(localStorage.getItem(event.srcElement.id + 'temp')) + "°F";
     currentWindEl.textContent = 'Wind Speed: ' + localStorage.getItem(event.srcElement.id + 'wind') + " MPH";
     currentHumiEl.textContent = 'Humidity: ' + localStorage.getItem(event.srcElement.id + 'humi') + '%';
 
     forecastOneDateEl.textContent = dayjs().add(1, 'day').format('MM-DD-YYYY');
     var iconOneCode = localStorage.getItem(event.srcElement.id + 'icon' + 0)
-    forecastOneIconEl.setAttribute('src', 'http://openweathermap.org/img/w/' + iconOneCode + '.png');
+    forecastOneIconEl.setAttribute('src', 'https://openweathermap.org/img/w/' + iconOneCode + '.png');
     forecastOneTempEl.textContent = convertTemp(localStorage.getItem(event.srcElement.id + 'temp' + 0)) + "°F";
     forecastOneWindEl.textContent = localStorage.getItem(event.srcElement.id + 'wind' + 0) + " MPH";
     forecastOneHumiEl.textContent = localStorage.getItem(event.srcElement.id + 'humi' + 0) + '%';
 
     forecastTwoDateEl.textContent = dayjs().add(2, 'day').format('MM-DD-YYYY');
     var iconTwoCode = localStorage.getItem(event.srcElement.id + 'icon' + 1)
-    forecastTwoIconEl.setAttribute('src', 'http://openweathermap.org/img/w/' + iconTwoCode + '.png');
+    forecastTwoIconEl.setAttribute('src', 'https://openweathermap.org/img/w/' + iconTwoCode + '.png');
     forecastTwoTempEl.textContent = convertTemp(localStorage.getItem(event.srcElement.id + 'temp' + 1)) + "°F";
     forecastTwoWindEl.textContent = localStorage.getItem(event.srcElement.id + 'wind' + 1) + " MPH";
     forecastTwoHumiEl.textContent = localStorage.getItem(event.srcElement.id + 'humi' + 1) + '%';
 
     forecastThreeDateEl.textContent = dayjs().add(3, 'day').format('MM-DD-YYYY');
     var iconThreeCode = localStorage.getItem(event.srcElement.id + 'icon' + 2)
-    forecastThreeIconEl.setAttribute('src', 'http://openweathermap.org/img/w/' + iconThreeCode + '.png');
+    forecastThreeIconEl.setAttribute('src', 'https://openweathermap.org/img/w/' + iconThreeCode + '.png');
     forecastThreeTempEl.textContent = convertTemp(localStorage.getItem(event.srcElement.id + 'temp' + 2)) + "°F";
     forecastThreeWindEl.textContent = localStorage.getItem(event.srcElement.id + 'wind' + 2) + " MPH";
     forecastThreeHumiEl.textContent = localStorage.getItem(event.srcElement.id + 'humi' + 2) + '%';
 
     forecastFourDateEl.textContent = dayjs().add(4, 'day').format('MM-DD-YYYY');
     var iconFourCode = localStorage.getItem(event.srcElement.id + 'icon' + 3)
-    forecastFourIconEl.setAttribute('src', 'http://openweathermap.org/img/w/' + iconFourCode + '.png');
+    forecastFourIconEl.setAttribute('src', 'https://openweathermap.org/img/w/' + iconFourCode + '.png');
     forecastFourTempEl.textContent = convertTemp(localStorage.getItem(event.srcElement.id + 'temp' + 3)) + "°F";
     forecastFourWindEl.textContent = localStorage.getItem(event.srcElement.id + 'wind' + 3) + " MPH";
     forecastFourHumiEl.textContent = localStorage.getItem(event.srcElement.id + 'humi' + 3) + '%';
 
     forecastFiveDateEl.textContent = dayjs().add(5, 'day').format('MM-DD-YYYY');
     var iconFiveCode = localStorage.getItem(event.srcElement.id + 'icon' + 4)
-    forecastFiveIconEl.setAttribute('src', 'http://openweathermap.org/img/w/' + iconFiveCode + '.png');
+    forecastFiveIconEl.setAttribute('src', 'https://openweathermap.org/img/w/' + iconFiveCode + '.png');
     forecastFiveTempEl.textContent = convertTemp(localStorage.getItem(event.srcElement.id + 'temp' + 4)) + "°F";
     forecastFiveWindEl.textContent = localStorage.getItem(event.srcElement.id + 'wind' + 4) + " MPH";
     forecastFiveHumiEl.textContent = localStorage.getItem(event.srcElement.id + 'humi' + 4) + '%';
@@ -121,7 +121,7 @@ function showCityDetails(event) {
 
 //Takes one argument and retrieves lat/long information.
 function getInfo(city) {
-    requestUrl = 'http://api.openweathermap.org/geo/1.0/direct?q=' + city + '&limit=5&appid=61b0e28df45740de971760b1d1fef5c5'
+    requestUrl = 'https://api.openweathermap.org/geo/1.0/direct?q=' + city + '&limit=5&appid=61b0e28df45740de971760b1d1fef5c5'
 
     fetch(requestUrl)
     .then(function (response) {
@@ -140,7 +140,7 @@ function getInfo(city) {
 
 //Takes three arguments and returns weather information for a city
 function getInfoFromCoords(lat, lon, city) {
-    requestUrl = 'http://api.openweathermap.org/data/3.0/onecall?lat=' + lat + '&lon=' + lon + '&appid=61b0e28df45740de971760b1d1fef5c5';
+    requestUrl = 'https://api.openweathermap.org/data/3.0/onecall?lat=' + lat + '&lon=' + lon + '&appid=61b0e28df45740de971760b1d1fef5c5';
     fetch(requestUrl)
     .then(function (response) {
         return response.json();
@@ -190,42 +190,42 @@ function showDefaultCityDetails(city) {
 
     currentCityEl.textContent = city + " (" + today + ")";
     var iconCode = localStorage.getItem(city + 'icon')
-    currentIconEl.setAttribute('src', 'http://openweathermap.org/img/w/' + iconCode + '.png');
+    currentIconEl.setAttribute('src', 'https://openweathermap.org/img/w/' + iconCode + '.png');
     currentTempEl.textContent = 'Temperature: ' + convertTemp(localStorage.getItem(city + 'temp')) + "°F";
     currentWindEl.textContent = 'Wind Speed: ' + localStorage.getItem(city + 'wind') + " MPH";
     currentHumiEl.textContent = 'Humidity: ' + localStorage.getItem(city + 'humi') + '%';
 
     forecastOneDateEl.textContent = dayjs().add(1, 'day').format('MM-DD-YYYY');
     var iconOneCode = localStorage.getItem(city + 'icon' + 0)
-    forecastOneIconEl.setAttribute('src', 'http://openweathermap.org/img/w/' + iconOneCode + '.png');
+    forecastOneIconEl.setAttribute('src', 'https://openweathermap.org/img/w/' + iconOneCode + '.png');
     forecastOneTempEl.textContent = convertTemp(localStorage.getItem(city + 'temp' + 0)) + "°F";
     forecastOneWindEl.textContent = localStorage.getItem(city + 'wind' + 0) + " MPH";
     forecastOneHumiEl.textContent = localStorage.getItem(city + 'humi' + 0) + '%';
 
     forecastTwoDateEl.textContent = dayjs().add(2, 'day').format('MM-DD-YYYY');
     var iconTwoCode = localStorage.getItem(city + 'icon' + 1)
-    forecastTwoIconEl.setAttribute('src', 'http://openweathermap.org/img/w/' + iconTwoCode + '.png');
+    forecastTwoIconEl.setAttribute('src', 'https://openweathermap.org/img/w/' + iconTwoCode + '.png');
     forecastTwoTempEl.textContent = convertTemp(localStorage.getItem(city + 'temp' + 1)) + "°F";
     forecastTwoWindEl.textContent = localStorage.getItem(city + 'wind' + 1) + " MPH";
     forecastTwoHumiEl.textContent = localStorage.getItem(city + 'humi' + 1) + '%';
 
     forecastThreeDateEl.textContent = dayjs().add(3, 'day').format('MM-DD-YYYY');
     var iconThreeCode = localStorage.getItem(city + 'icon' + 2)
-    forecastThreeIconEl.setAttribute('src', 'http://openweathermap.org/img/w/' + iconThreeCode + '.png');
+    forecastThreeIconEl.setAttribute('src', 'https://openweathermap.org/img/w/' + iconThreeCode + '.png');
     forecastThreeTempEl.textContent = convertTemp(localStorage.getItem(city + 'temp' + 2)) + "°F";
     forecastThreeWindEl.textContent = localStorage.getItem(city + 'wind' + 2) + " MPH";
     forecastThreeHumiEl.textContent = localStorage.getItem(city + 'humi' + 2) + '%';
 
     forecastFourDateEl.textContent = dayjs().add(4, 'day').format('MM-DD-YYYY');
     var iconFourCode = localStorage.getItem(city + 'icon' + 3)
-    forecastFourIconEl.setAttribute('src', 'http://openweathermap.org/img/w/' + iconFourCode + '.png');
+    forecastFourIconEl.setAttribute('src', 'https://openweathermap.org/img/w/' + iconFourCode + '.png');
     forecastFourTempEl.textContent = convertTemp(localStorage.getItem(city + 'temp' + 3)) + "°F";
     forecastFourWindEl.textContent = localStorage.getItem(city + 'wind' + 3) + " MPH";
     forecastFourHumiEl.textContent = localStorage.getItem(city + 'humi' + 3) + '%';
 
     forecastFiveDateEl.textContent = dayjs().add(5, 'day').format('MM-DD-YYYY');
     var iconFiveCode = localStorage.getItem(city + 'icon' + 4)
-    forecastFiveIconEl.setAttribute('src', 'http://openweathermap.org/img/w/' + iconFiveCode + '.png');
+    forecastFiveIconEl.setAttribute('src', 'https://openweathermap.org/img/w/' + iconFiveCode + '.png');
     forecastFiveTempEl.textContent = convertTemp(localStorage.getItem(city + 'temp' + 4)) + "°F";
     forecastFiveWindEl.textContent = localStorage.getItem(city + 'wind' + 4) + " MPH";
     forecastFiveHumiEl.textContent = localStorage.getItem(city + 'humi' + 4) + '%';
