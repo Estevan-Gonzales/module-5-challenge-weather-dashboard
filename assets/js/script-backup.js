@@ -36,7 +36,7 @@ var currentTemp = 10;
 
 function getInfo(city) {
   // replace `octocat` with anyone else's GitHub username
-    requestUrl = 'http://api.openweathermap.org/geo/1.0/direct?q=' + city + '&limit=5&appid=61b0e28df45740de971760b1d1fef5c5'
+    requestUrl = 'https://api.openweathermap.org/geo/1.0/direct?q=' + city + '&limit=5&appid=61b0e28df45740de971760b1d1fef5c5'
 
     fetch(requestUrl)
     .then(function (response) {
